@@ -12,7 +12,7 @@ object MySparkPrj{
   val b = sc.parallelize(List("My name is foo bar abc xyz foo bar xyz"))
   val c = b.flatMap(x=>x.split(" "))
   val d = c.map(x=>(x,1))
-  val e = 1
+  val e = 2
   d.reduceByKey(_+_).collect().foreach(println)
 }
 }
